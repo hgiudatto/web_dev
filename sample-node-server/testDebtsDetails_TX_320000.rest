@@ -1,0 +1,92 @@
+
+### APIs
+@UsuariosMockServiceDebtsDetails = http://10.10.8.123:8080/consultasapi/consultas-api/internal/v2/rest/debts_details
+
+### Test usuarios - login
+POST http://10.10.8.123:8080/usuarios-api/internal/v2/login
+Content-Type: application/json
+
+{
+  "consumer_id": "GLCA",
+  "channel": "Q",
+  "ip_address": "10.10.10.10",
+  "terminal": "TERMINALTEST",
+  "timestamp": "12345678901234",
+  "origin": "0",
+  "sub_code": "",
+  "client": {
+    "document_number": "20573460",
+    "document_type": "1",
+    "password": "",
+    "strong_key": false,
+    "card_number": "4517690003253800"
+  }
+}
+
+### Test consultas - debts_details
+POST http://192.168.76.33:8080/consultas-api/internal/v2/rest/debts_details
+Content-Type: application/json
+
+{
+  "consumer_id": "GLCA",
+  "channel": "Y",
+  "ip_address": "10.10.10.10",
+  "terminal": "TERMINALTEST",
+  "origin": "0",
+  "timestamp": "12345678901234",
+  "client": {
+    "document_number": "20573460",
+    "document_type": "DNI"
+  }
+}
+
+### Test Mock Service consultas - debts_details - AprobadoConFacturas
+POST {{UsuariosMockServiceDebtsDetails}}
+Content-Type: application/json
+
+{
+  "consumer_id": "GLCA",
+  "channel": "Y",
+  "ip_address": "10.10.10.10",
+  "terminal": "TERMINALTEST",
+  "origin": "0",
+  "timestamp": "12345678901234",
+  "client": {
+    "document_type": "DNI",
+    "document_number": "20573460"
+  }
+}
+
+### Test Mock Service consultas - debts_details - AprobadoSinFacturas
+POST {{UsuariosMockServiceDebtsDetails}}
+Content-Type: application/json
+
+{
+  "consumer_id": "GLCA",
+  "channel": "Y",
+  "ip_address": "10.10.10.10",
+  "terminal": "TERMINALTEST",
+  "origin": "0",
+  "timestamp": "12345678901234",
+  "client": {
+    "document_type": "DNI",
+    "document_number": "20573461"
+  }
+}
+
+### Test Mock Service consultas - debts_details - B65-SinInformacion
+POST {{UsuariosMockServiceDebtsDetails}}
+Content-Type: application/json
+
+{
+  "consumer_id": "GLCA",
+  "channel": "Y",
+  "ip_address": "10.10.10.10",
+  "terminal": "TERMINALTEST",
+  "origin": "0",
+  "timestamp": "12345678901234",
+  "client": {
+    "document_type": "DNI",
+    "document_number": "20573465"
+  }
+}

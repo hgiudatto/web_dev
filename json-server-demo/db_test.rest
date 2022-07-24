@@ -1,0 +1,35 @@
+
+### Environment
+@usersApi_URL = http://localhost:3000/
+
+### Retrieve all users
+GET http://localhost:3000/users
+
+Content-Type: application/json
+
+### Create user 'demo'
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "Demo_2"
+}
+
+### Delete user 3
+DELETE http://localhost:3000/users/3
+
+### Modify user 4 name
+PUT http://localhost:3000/users/4
+Content-Type: application/json
+
+{
+    "name": "Achilles"
+}
+
+### Patching user name
+PATCH http://localhost:3000/users/2
+Content-Type: application/json
+
+{
+    "name": "Boba Fett"
+}

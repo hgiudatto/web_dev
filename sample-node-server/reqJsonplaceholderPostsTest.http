@@ -1,0 +1,29 @@
+
+@PostsApi = https://jsonplaceholder.typicode.com/posts
+
+### Retrieve all of the posts
+GET {{PostsApi}}
+
+### Retrieve just one 
+GET {{PostsApi}}/1
+
+### Create new post
+POST {{PostsApi}}
+Content-Type: application/json
+
+{
+    "title": "Learning how to send HTTP Requests with Rest Client VSCode Extension",
+    "body": "it's very exciting"
+}
+
+### Delete a post
+DELETE {{PostsApi}}/1
+
+### Update a post yb id
+PUT {{PostsApi}}/1
+Content-Type: application/json
+
+{
+    "title": "this is post number 1",
+    "body": "this content has been updated"
+}

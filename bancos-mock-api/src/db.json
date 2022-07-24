@@ -1,0 +1,36 @@
+{
+  "bancos": [
+    {
+      "fiid_banco": "GLCA",
+      "nombre_banco": "Galicia",
+      "tipo_clave": ["numerica"],
+      "login_directo": true,
+      "lista_bancos_login_directo,": ["RBTS", "BSTN", "IBAY"],
+      "lista_bancos_interconexion": ["SDMR", "RIOP", "SPRE"]
+    },
+    {
+      "fiid_banco": "TUCU",
+      "nombre_banco": "del Tucumán",
+      "tipo_clave": ["alfanumerica"],
+      "login_directo": false,
+      "lista_bancos_login_directo,": [""],
+      "lista_bancos_interconexion": ["SDMR", "RIOP", "SPRE"]
+    },
+    {
+      "fiid_banco": "BROU",
+      "nombre_banco": "BROU",
+      "tipo_clave": ["alfanumerica"],
+      "login_directo": false,
+      "lista_bancos_login_directo,": [""],
+      "lista_bancos_interconexion": ["SDMR", "RIOP", "SPRE"]
+    },
+    {
+      "fiid_banco": "BBNK",
+      "nombre_banco": "Brubank",
+      "tipo_clave": ["numerica"],
+      "login_directo": false,
+      "lista_bancos_login_directo,": [""],
+      "lista_bancos_interconexion": ["SDMR", "RIOP", "SPRE"]
+    }
+  ]
+}

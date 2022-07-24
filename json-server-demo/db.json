@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Leigh"
+    },
+    {
+      "id": 2,
+      "name": "Boba Fett"
+    },
+    {
+      "name": "Achilles",
+      "id": 4
+    }
+  ],
+  "repositories": [
+    {
+      "id": 1,
+      "url": "https://github.com/leighhalliday/hello",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "url": "https://github.com/leighhalliday/second",
+      "userId": 1
+    }
+  ]
+}
